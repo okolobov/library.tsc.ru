@@ -20,12 +20,30 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "angular-animate": "^1.8.3",
     "angular-aria": "^1.8.3",
     "angular-material": "^1.2.5",
-    "angularjs": "^0.0.1"
+    "angularjs": "^0.0.1",
+    "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "@webdiscus/pug-loader": "^2.11.1",
+    "@zainulbr/i18n-webpack-plugin": "^2.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.8",
+    "pug": "^3.0.4",
+    "robotstxt-webpack-plugin": "^8.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2",
+    "webpack-dev-server": "^6.0.0",
+    "webpack-merge": "^6.0.1"
   }
 }

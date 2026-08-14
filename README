@@ -2,12 +2,14 @@
 
 # NAME
 
-library.tsc.ru - web site for libraries
+library.tsc.ru - cайт научно-технических библиотек ТНЦ СО РАН
 
 # Log
 
 ```
 
 npm install angularjs angular-animate angular-aria angular-material
+
+npx gitignore node
 
 ```
