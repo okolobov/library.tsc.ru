@@ -2,27 +2,43 @@
   "name": "library.tsc.ru",
   "version": "1.0.0",
   "description": "Site library.tsc.ru",
-  "keywords": [
-    "TSC",
-    "WWW"
-  ],
-  "homepage": "https://github.com/okolobov/library.tsc.ru#readme",
-  "bugs": {
-    "url": "https://github.com/okolobov/library.tsc.ru/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/okolobov/library.tsc.ru.git"
-  },
-  "license": "ISC",
-  "author": "Oleg Kolobov",
-  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@uirouter/angularjs": "^0.2.17",
-    "angular": "^1.8.3"
+    "@uirouter/angularjs": "^1.1.2",
+    "angular": "^1.8.3",
+    "angular-animate": "^1.8.3",
+    "angular-base64": "^2.0.5",
+    "angular-cookies": "^1.8.3",
+    "angular-messages": "^1.8.3",
+    "angular-resource": "^1.8.3",
+    "angular-ui-router": "1.0.30",
+    "bootstrap": "4.6.2",
+    "bootstrap-icons": "^1.11.3",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1",
+    "ui-bootstrap4": "^3.0.7"
+  },
+  "devDependencies": {
+    "@webdiscus/pug-loader": "^2.11.0",
+    "@zainulbr/i18n-webpack-plugin": "^2.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "i18n-webpack-plugin": "^1.0.0",
+    "pug": "^3.0.3",
+    "robotstxt-webpack-plugin": "^8.0.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^6.0.0",
+    "webpack-merge": "^6.0.1"
   }
 }

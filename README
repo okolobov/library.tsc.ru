@@ -6,16 +6,6 @@ library.tsc.ru - cайт научно-технических библиотек 
 
 # Log
 
-Шаг 1
 ```
-npm init
 npx gitignore node
-```
-
-
-Шаг 2
-```
-npm install --save angular 
-npm install --save @uirouter/angularjs 
-npm audit fix --force
 ```
