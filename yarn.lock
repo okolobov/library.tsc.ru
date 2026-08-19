@@ -762,6 +762,11 @@ angular-animate@^1.8.3:
   resolved "https://registry.yarnpkg.com/angular-animate/-/angular-animate-1.8.3.tgz#f88db37325de256f9144d1242ce3158134a9d72a"
   integrity sha512-/LtTKvy5sD6MZbV0v+nHgOIpnFF0mrUp+j5WIxVprVhcrJriYpuCZf4S7Owj1o76De/J0eRzANUozNJ6hVepnQ==
 
+angular-aria@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.8.3.tgz#b387ebca9569eb557855abb283a09c2d0457e779"
+  integrity sha512-qTXclmTW/KGw5JNKKQPcCKKq6hCBZ39jYINmLgMsjUHBAoxULaMRRTaRj/L2VTOjKvK5f9enkx+EUqRqzXDSFQ==
+
 angular-base64@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/angular-base64/-/angular-base64-2.0.5.tgz#13255562ad1c8e8ca09b9c4b1f4ef966ac4cd093"
@@ -773,6 +778,11 @@ angular-cookies@^1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/angular-cookies/-/angular-cookies-1.8.3.tgz#180a41e938926790630245d22c02a8d33d1409cc"
   integrity sha512-uRd+zWgqiVnly7+YFRosM8E9tUQeY82dAZdtvonh/CeD/sf5SKN/BNIlMlHxZtoAk72ahTIjqUQGfeHdYcSsRQ==
+
+angular-material@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.2.5.tgz#6fb3fbf3622d443e4449aaf237d692ad04623a23"
+  integrity sha512-bTTDV0vszpfms1tAMzhLntxBiNMCk/I3Mx/vhbtfhijJILODjpDBfWah0nvWrniFIcxMLcsb1tcPri13hZEaew==
 
 angular-messages@^1.8.3:
   version "1.8.3"

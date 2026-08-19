@@ -1,6 +1,6 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.min.css';
+//import 'bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import './style.css';
 import angular from 'angular';
 import ngresource from 'angular-resource';
@@ -9,7 +9,10 @@ import ngmessages from 'angular-messages';
 import ngbase64 from 'angular-base64';
 import ngcookies from 'angular-cookies';
 import uirouter from 'angular-ui-router';
-import uibootstrap from 'ui-bootstrap4';
+//import uibootstrap from 'ui-bootstrap4';
+import 'angular-material/angular-material.min.css';
+import ngaria from 'angular-aria';
+import ngmaterial from 'angular-material';
 
 import routing from './app.config';
 import app from './components/app';
@@ -30,7 +33,9 @@ angular
         ngcookies,
         'base64',
         uirouter,
-        uibootstrap,
+        //uibootstrap,
+        ngaria,
+        ngmaterial,
         app,
         navigation,
         home, help, login, registration,

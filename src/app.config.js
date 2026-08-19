@@ -16,7 +16,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
         .state('home', {
             url: '/',
             views: {
-                header: 'navigation',
+                header: 'navigation2',
                 body: 'home'
             }
         }).state('help', {
