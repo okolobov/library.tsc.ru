@@ -4,6 +4,14 @@
 
 library.tsc.ru - cайт научно-технических библиотек ТНЦ СО РАН
 
+# INSTALL
+
+
+```
+npm install --save angular-ui-router@1.0.30
+```
+
+
 # Log
 
 ```

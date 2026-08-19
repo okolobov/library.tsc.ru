@@ -1,0 +1,13 @@
+mixin pagination
+    ul.justify-content-center(
+        ng-if="$ctrl.response['zs:searchRetrieveResponse']['zs:numberOfRecords'][0]>$ctrl.itemsPerPage"
+        uib-pagination,
+        ng-model="$ctrl.current",
+        ng-change="$ctrl.pageChanged()",
+        total-items="$ctrl.response['zs:searchRetrieveResponse']['zs:numberOfRecords'][0]",
+        items-per-page="$ctrl.itemsPerPage",
+        max-size="$ctrl.maxSize",
+        num-pages="$ctrl.numPages",
+        previous-text!="&lsaquo;&lsaquo;",
+        next-text!="&rsaquo;&rsaquo;"
+        )

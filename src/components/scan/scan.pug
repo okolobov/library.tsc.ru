@@ -1,0 +1,17 @@
+h1 Scan 
+
+include partails/form
+
+div(ng-if="$ctrl.response")
+    div(ng-if="$ctrl.response['zs:scanResponse']['zs:diagnostics']")
+            | {{$ctrl.response['zs:scanResponse']['zs:diagnostics'][0]['diag:diagnostic'][0]['diag:uri'][0]}}
+            | :
+            | {{$ctrl.response['zs:scanResponse']['zs:diagnostics'][0]['diag:diagnostic'][0]['diag:message'][0]}} 
+
+    div(ng-if="$ctrl.response['zs:scanResponse']['zs:terms']")
+        | Запрос: <b>{{$ctrl.scanClause}}</b>
+        | 
+        terms-list(content="$ctrl.response['zs:scanResponse']['zs:terms'][0]['zs:term']", on-select="$ctrl.callSearch(item)", on-next="$ctrl.callScanNext(item)", on-prev="$ctrl.callScanPrev(item)", cc="{{$ctrl.columnCount}}")
+
+//hr
+//pre {{$ctrl|json}}

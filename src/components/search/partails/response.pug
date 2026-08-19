@@ -1,0 +1,23 @@
+div(ng-if="$ctrl.response")
+    hr
+    div(ng-if="$ctrl.response['zs:searchRetrieveResponse']['zs:diagnostics']")
+        p
+            | {{$ctrl.response['zs:searchRetrieveResponse']['zs:diagnostics'][0]['diag:diagnostic'][0]['diag:uri'][0]}}
+            | :
+            | {{$ctrl.response['zs:searchRetrieveResponse']['zs:diagnostics'][0]['diag:diagnostic'][0]['diag:message'][0]}} 
+
+    div(ng-if="$ctrl.response['zs:searchRetrieveResponse']['zs:numberOfRecords']")
+        p Запрос: <b>{{$ctrl.response['zs:searchRetrieveResponse']['zs:echoedSearchRetrieveRequest'][0]['zs:query'][0]}}</b>
+        p Найдено записей: <b>{{$ctrl.response['zs:searchRetrieveResponse']['zs:numberOfRecords'][0]}}</b>
+
+
+        p
+        +pagination
+
+        documents-list(content="$ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record']")
+
+        p
+        +pagination
+
+    //hr
+    //pre {{$ctrl.response|json}}

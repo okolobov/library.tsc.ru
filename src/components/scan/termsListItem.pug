@@ -1,0 +1,15 @@
+//script(type="text/ng-template", id="myaccordion")
+    div(role="tablist", ng-transclude)
+
+//script(type="text/ng-template", id="myaccordionGroup")
+    div.card-header(role="tab", id="{{::headingId}}", aria-selected="{{isOpen}}", ng-keypress="toggleOpen($event)")
+        h6.mb-0
+            a.accordion-toggle(role="button", data-toggle="collapse", href, aria-expanded="{{isOpen}}", aria-controls="{{::cardId}}", tabindex="0", ng-click="toggleOpen()", uib-accordion-transclude="heading", ng-disabled="isDisabled", uib-tabindex-toggle)
+                span(uib-accordion-header, ng-class="{'text-muted': isDisabled}") {{heading}}
+    div.card-collapse.collapse(id="{{::cardId}}", aria-labelledby="{{::headingId}}", aria-hidden="{{!isOpen}}", role="tabcard", uib-collapse="!isOpen")
+        div.card-body(ng-transclude)
+
+
+li
+    a(href, ng-click="$ctrl.select()")
+        | {{$ctrl.item['zs:displayTerm'][0]}} <span class="badge badge-secondary">{{$ctrl.item['zs:numberOfRecords'][0]}}</span>

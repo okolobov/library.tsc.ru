@@ -1,0 +1,15 @@
+mixin prevNext
+    //.row(ng-if="$ctrl.content.length < $ctrl.maximimTerms")
+    .row
+        .col-sm-12.text-left
+            .btn-group
+                button.btn.btn-link.bi.bi-arrow-left(type="button", ng-click="$ctrl.prev($ctrl.content[0])")
+                button.btn.btn-link.bi.bi-arrow-right(type="button", ng-click="$ctrl.next($ctrl.content[$ctrl.content.length-1])")
+
++prevNext
+
+ul.card-columns(style="column-count: {{$ctrl.cc}}")
+   terms-list-item(ng-repeat="item in $ctrl.content", item="item", on-select="$ctrl.selectedItem(item)")
+
+
++prevNext

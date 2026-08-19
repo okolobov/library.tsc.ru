@@ -1,0 +1,20 @@
+.alert.alert-danger(ng-if="$ctrl.error") {{$ctrl.error.data}}
+form(role="form", autocomplete="off")
+    .row
+        .col-sm-12.form-group
+            label.control-label(for="query") Введите запрос:
+            input.form-control(id="query", type="text", ng-model="$ctrl.query")
+
+    .row
+        .col-sm-12.form-group
+
+            ul.list-inline
+                li.list-inline-item
+                    button.btn.btn-primary(type="submit", ng-disabled="$ctrl.loading", ng-click="$ctrl.callSearch()")
+                        | Search
+
+                li.list-inline-item
+                    button.btn.btn-secondary(type="reset", ng-click="$ctrl.callReset()")
+                        | Cancel 
+                li.list-inline-item
+                    span(ng-if="$ctrl.loading") Loading ...

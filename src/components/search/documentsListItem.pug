@@ -1,0 +1,22 @@
+.media
+    .media-left
+        | <b>{{$ctrl.item['zs:recordPosition'][0]}}</b>.
+    .media-body
+        div
+            span(ng-repeat="i in $ctrl.item['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Title']")
+                | <span ng-if="!$first">. </span>{{i['TitleText'][0]}}
+
+        div
+            span(ng-repeat="i in $ctrl.item['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Contributor']")
+                | <i> <span ng-if="!$first">, </span>{{i['KeyNames'][0]}} {{i['NamesBeforeKey'][0]}}<span ng-if="$last"> </span></i>
+
+        div
+            span.text-success(ng-repeat="i in $ctrl.item['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Instance']")
+                | {{i['TitleText'][0]}}<br>
+        
+
+        ul.list-inline
+            li.list-inline-item
+                a(href,  ui-sref="document({docid: $ctrl.item['zs:recordData'][0]['mk2xml'][0]['Work'][0]['id'][0]})") Подробнее
+            li.list-inline-item
+                a(href,  ui-sref="editor({docid: $ctrl.item['zs:recordData'][0]['mk2xml'][0]['Work'][0]['id'][0]})") Редактировать документ

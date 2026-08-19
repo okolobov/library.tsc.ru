@@ -1,0 +1,21 @@
+.alert.alert-danger(ng-if="$ctrl.error") {{$ctrl.error.data}}
+form(role="form", autocomplete="off")
+    .row
+        .col-2.form-group
+            label.control-label(for="index") IndexLabel
+            select.form-control(id="index", ng-model="$ctrl.index", ng-options="i.name for i in $ctrl.indexes")
+        .col-6.form-group
+            label.control-label(for="term") TermLabel:
+            input.form-control(id="term", type="text", ng-model="$ctrl.term")
+
+    .row
+        .col-sm-12.form-group
+            ul.list-inline
+                li.list-inline-item
+                    button.btn.btn-primary(type="submit", ng-disabled="$ctrl.loading", ng-click="$ctrl.callScan()")
+                        | Scan
+                li.list-inline-item
+                    button.btn.btn-secondary(type="reset", ng-click="$ctrl.callReset()")
+                        | Cancel
+                li.list-inline-item
+                    span(ng-if="$ctrl.loading") Loading ...

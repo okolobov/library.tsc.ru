@@ -1,0 +1,3 @@
+li.nav-item
+    a.font-weight-bold.nav-link(href, ng-class="{active: $ctrl.isActive}", ui-sref="{{$ctrl.item.ref}}", ng-click="$ctrl.select()")
+        | {{$ctrl.item.name}}

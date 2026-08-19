@@ -1,0 +1,10 @@
+include partails/common
+
+h1(ng-if="$ctrl.f == 1") Search 
+h1(ng-if="$ctrl.f == 2") Расширенный поиск 
+
+include partails/form
+include partails/response
+
+div(ng-if="!$ctrl.response && $ctrl.f == '2'")
+    include partails/examples

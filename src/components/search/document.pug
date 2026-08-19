@@ -1,0 +1,33 @@
+
+//a.btn.btn-primary(href, ui-sref="editor({docid: $ctrl.docid})") Edit
+
+h1
+    | {{$ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record'][0]['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Title'][0]['TitleText'][0]}}
+
+
+
+
+.row
+    .col-sm-12
+        ul.list-inline.float-right
+            li.list-inline-item
+                a(href,  ui-sref="editor({docid: $ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record'][0]['zs:recordData'][0]['mk2xml'][0]['Work'][0]['id'][0]})") Редактировать документ
+
+.row
+    .col-sm-12
+        uib-tabset
+            uib-tab(index="1", heading="Документ")
+                p
+                div
+                    span(ng-repeat="i in $ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record'][0]['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Title']")
+                        | <span ng-if="!$first">. </span>{{i['TitleText'][0]}}
+                div
+                    span(ng-repeat="i in $ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record'][0]['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Contributor']")
+                        | <i> <span ng-if="!$first">, </span>{{i['KeyNames'][0]}} {{i['NamesBeforeKey'][0]}}<span ng-if="$last"> </span></i>
+                div
+                    span.text-success(ng-repeat="i in $ctrl.response['zs:searchRetrieveResponse']['zs:records'][0]['zs:record'][0]['zs:recordData'][0]['mk2xml'][0]['Work'][0]['Instance']")
+                        | {{i['TitleText'][0]}}<br>
+ 
+
+            uib-tab(index="9", heading="JSON")
+                pre {{$ctrl.response|json}}
