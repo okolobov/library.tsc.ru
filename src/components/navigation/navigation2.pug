@@ -1,6 +1,11 @@
-md-content.md-padding
-    md-nav-bar(md-no-ink-bar="disableInkBar", md-selected-nav-item="currentNavItem", nav-bar-aria-label="navigation links")
-        md-nav-item(md-nav-click="go('page1')", name="page1") Page One
-        md-nav-item(md-nav-click="go('page2')", name="page2", disabled) Page Two
-        md-nav-item(md-nav-click="go('page3')", name="page3") Page Three
+md-toolbar.md-hue-2
+    .md-toolbar-tools
+        h2 library.tsc.ru
 
+        span.flex
+
+        md-button(ui-sref="home", ui-sref-active="active-nav") Home
+        md-button(ui-sref="help()", ui-sref-active="active-nav") Помощь 
+        md-button(ng-if="!$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav") Вход
+        md-button(ng-if="!$ctrl.isAuth", ui-sref="registration()", ui-sref-active="active-nav") Регистрация
+        md-button(ng-if="$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav") Выход

@@ -2,10 +2,11 @@ routing.$inject = [
     '$locationProvider',
     '$urlRouterProvider',
     '$stateProvider',
-    '$httpProvider'
+    '$httpProvider',
+    '$mdThemingProvider'
 ];
 
-export default function routing($locationProvider, $urlRouterProvider, $stateProvider, $httpProvider) {
+export default function routing($locationProvider, $urlRouterProvider, $stateProvider, $httpProvider, $mdThemingProvider) {
 
     $locationProvider.html5Mode(true);
     //$locationProvider.hashPrefix("!");
@@ -22,7 +23,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
         }).state('help', {
             url: '/help',
             views: {
-                header: 'navigation',
+                header: 'navigation2',
                 body: 'help'
             }
         }).state('about', {
@@ -34,7 +35,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
         }).state('login', {
             url: '/login',
             views: {
-                header: 'navigation',
+                header: 'navigation2',
                 body: 'login'
             }
         }).state('profile', {
@@ -46,13 +47,13 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
         }).state('logout', {
             url: '/logout',
             views: {
-                header: 'navigation',
+                header: 'navigation2',
                 body: 'logout'
             }
         }).state('registration', {
             url: '/registration',
             views: {
-                header: 'navigation',
+                header: 'navigation2',
                 body: 'registration'
             }
         }).state('opac', {
@@ -135,4 +136,15 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
                 body: 'document'
             }
         });
+
+
+    $mdThemingProvider.theme('default')
+        .primaryPalette('blue')
+        .accentPalette('pink');
+
+    $mdThemingProvider.enableBrowserColor({
+        theme: 'default',
+        pallete: 'primary',
+        hue: '800'
+    });
 }

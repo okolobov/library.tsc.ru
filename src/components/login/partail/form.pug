@@ -1,28 +1,20 @@
-.alert.alert-danger(ng-if="$ctrl.error") {{$ctrl.error}}
+form(name="loginForm", ng-submit="loginForm.$valid && $ctrl.login()", enctype="application/x-www-form-urlencoded")
+    md-input-container.md-block
+        label Имя
+        input(name="identifier", type="text", ng-model='$ctrl.identifier', required, placeholder="Имя", autocomplete="off")
+        div(ng-messages="loginForm.identifier.$error", role="alert")
+            div(ng-message="required") This field is required.
+            div(ng-message="identifier") Please enter a valid email address.
 
-form(name="form", ng-submit="form.$valid && $ctrl.login()", enctype="application/x-www-form-urlencoded")
+    md-input-container.md-block
+        label Пароль 
+        input(name="password", type="password", ng-model='$ctrl.password', required, placeholder="Пароль", autocomplete="off")
+        div(ng-messages="loginForm.password.$error", role="alert")
+            div(ng-message="required") This field is required.
+            div(ng-message="password") Please enter a valid email address.
 
 
-    .form-group(ng-class="{'has-error': form.$submitted && form.identifier.$invalid}")
-        label.control-label(for="identifier") Identifier*
-        input.form-control(name="identifier", type="text", ng-model='$ctrl.identifier', required, placeholder="identifier", autocomplete="off")
 
-        div(ng-messages="form.$submitted && form.identifier.$error", role="alert")
-            div(ng-message="required")
-                | Identifier is required*
-
-    .form-group(ng-class="{'has-error': form.$submitted && form.password.$invalid}")
-        label.control-label(for="password") Password*
-        input.form-control(name="password", type="password", ng-model='$ctrl.password', required, placeholder="password", autocomplete="off")
-        div(ng-messages="form.$submitted && form.password.$error", role="alert")
-            div(ng-message="required")
-                | Password is required*
-
-    .form-group
-        ul.list-inline
-            li.list-inline-item
-                button.btn.btn-primary(type="submit", ng-disabled="$ctrl.loading")
-                    | Login
-            li.list-inline-item
-                button.btn.btn-secondary(type="reset", ng-click="$ctrl.reset()", ng-disabled="$ctrl.loading")
-                    | Cancel
+    div
+        md-button(type="submit", ng-disabled="$ctrl.loading") Вход
+        md-button(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить
