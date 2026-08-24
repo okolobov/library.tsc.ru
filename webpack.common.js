@@ -31,12 +31,12 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jquery: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery"
-        }),
+        //new webpack.ProvidePlugin({
+        //    $: 'jquery',
+        //    jquery: "jquery",
+        //    jQuery: "jquery",
+        //    "window.jQuery": "jquery"
+        //}),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'src/index.pug'

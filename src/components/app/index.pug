@@ -1,2 +1,12 @@
-div(ui-view="header")
-div(ui-view="body")
+div(layout="column", layout-fill, role="main")
+
+    div(ui-view="header")
+    
+    md-content.flex.layout-padding
+        .container
+            div(ui-view="body")
+
+    md-toolbar.md-hue-2
+        .md-toolbar-tools(layout="row", layout-align="center center")
+            //span.footnote-text (c) 2026, Комлоr
+            span.md-caption (c) 2026, Комлоr

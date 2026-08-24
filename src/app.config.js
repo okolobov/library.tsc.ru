@@ -137,14 +137,4 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             }
         });
 
-
-    $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
-        .accentPalette('pink');
-
-    $mdThemingProvider.enableBrowserColor({
-        theme: 'default',
-        pallete: 'primary',
-        hue: '800'
-    });
 }

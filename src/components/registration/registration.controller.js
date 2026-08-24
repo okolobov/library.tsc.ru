@@ -3,6 +3,7 @@ RegistrationController.$inject = ['$location', '$window', 'RegistrationService']
 export default function RegistrationController($location, $window, RegistrationService) {
     var ctrl = this;
 
+    /*
     ctrl.$onInit = function() {
         reset();
     };
@@ -38,4 +39,5 @@ export default function RegistrationController($location, $window, RegistrationS
         ctrl.email = null;
         ctrl.error = null;
     }
+    */
 }

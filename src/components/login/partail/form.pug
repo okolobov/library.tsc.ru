@@ -3,15 +3,15 @@ form(name="loginForm", ng-submit="loginForm.$valid && $ctrl.login()", enctype="a
         label Имя
         input(name="identifier", type="text", ng-model='$ctrl.identifier', required, placeholder="Имя", autocomplete="off")
         div(ng-messages="loginForm.identifier.$error", role="alert")
-            div(ng-message="required") This field is required.
             div(ng-message="identifier") Please enter a valid email address.
+            //div(ng-message="required") This field is required.
 
     md-input-container.md-block
         label Пароль 
         input(name="password", type="password", ng-model='$ctrl.password', required, placeholder="Пароль", autocomplete="off")
         div(ng-messages="loginForm.password.$error", role="alert")
-            div(ng-message="required") This field is required.
             div(ng-message="password") Please enter a valid email address.
+            //div(ng-message="required") This field is required.
 
 
 
