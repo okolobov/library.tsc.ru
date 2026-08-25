@@ -1,9 +1,6 @@
 import angular from 'angular';
 
 export default angular.module('components.navigation', [])
-    .component('navigation2', {
-        template: require('./navigation2.pug')()
-    })
     .component('navigation', {
         template: require('./navigation.pug')(),
         controller: ['$state', '$window', 'AuthenticationService', function($state, $window, AuthenticationService) { 

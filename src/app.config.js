@@ -18,48 +18,56 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             url: '/',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'home'
             }
         }).state('help', {
             url: '/help',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'help'
             }
         }).state('about', {
             url: '/help/about',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'about'
             }
         }).state('login', {
             url: '/login',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'login'
             }
         }).state('profile', {
             url: '/profile',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'profile'
             }
         }).state('logout', {
             url: '/logout',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'logout'
             }
         }).state('registration', {
             url: '/registration',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'registration'
             }
         }).state('opac', {
             url: '/opac',
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'opac'
             }
         }).state('scan', {
@@ -91,6 +99,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             },
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'scan'
             }
         }).state('search', {
@@ -122,6 +131,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             },
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'search'
             }
         }).state('document', {
@@ -133,6 +143,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             },
             views: {
                 header: 'header',
+                footer: 'footer',
                 body: 'document'
             }
         });
