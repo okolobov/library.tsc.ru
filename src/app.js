@@ -16,7 +16,8 @@ import ngmaterial from 'angular-material';
 
 import routing from './app.config';
 import app from './components/app';
-import navigation from './components/navigation';
+import header from './components/header';
+import footer from './components/footer';
 import home from './components/home';
 import help from './components/help';
 import login from './components/login';
@@ -37,7 +38,8 @@ angular
         ngaria,
         ngmaterial,
         app,
-        navigation,
+        header,
+        footer,
         home, help, login, registration,
         search, scan, opac
     ])

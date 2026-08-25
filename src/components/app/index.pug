@@ -1,12 +1,20 @@
-div(layout="column", layout-fill, role="main")
+div(layout="column", layout-fill)
 
-    div(ui-view="header")
-    
-    md-content.flex.layout-padding
-        .container
-            div(ui-view="body")
+    header
+        div(ui-view="header")
 
-    md-toolbar.md-hue-2
+    main
+        .md-padding(layout="row", flex)
+            .flex
+                div(ui-view="body")
+
+
+    footer
+        div(layout="row", layout-align="center center")
+            h2 (c) 2026, Комлог
+
+
+    //md-toolbar.md-hue-2
         .md-toolbar-tools(layout="row", layout-align="center center")
             //span.footnote-text (c) 2026, Комлоr
             span.md-caption (c) 2026, Комлоr

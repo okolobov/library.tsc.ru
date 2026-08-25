@@ -17,49 +17,49 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
         .state('home', {
             url: '/',
             views: {
-                header: 'navigation2',
+                header: 'header',
                 body: 'home'
             }
         }).state('help', {
             url: '/help',
             views: {
-                header: 'navigation2',
+                header: 'header',
                 body: 'help'
             }
         }).state('about', {
             url: '/help/about',
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'about'
             }
         }).state('login', {
             url: '/login',
             views: {
-                header: 'navigation2',
+                header: 'header',
                 body: 'login'
             }
         }).state('profile', {
             url: '/profile',
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'profile'
             }
         }).state('logout', {
             url: '/logout',
             views: {
-                header: 'navigation2',
+                header: 'header',
                 body: 'logout'
             }
         }).state('registration', {
             url: '/registration',
             views: {
-                header: 'navigation2',
+                header: 'header',
                 body: 'registration'
             }
         }).state('opac', {
             url: '/opac',
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'opac'
             }
         }).state('scan', {
@@ -90,7 +90,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
                 }]
             },
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'scan'
             }
         }).state('search', {
@@ -121,7 +121,7 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
                 }]
             },
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'search'
             }
         }).state('document', {
@@ -132,9 +132,15 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
                 }],
             },
             views: {
-                header: 'navigation',
+                header: 'header',
                 body: 'document'
             }
         });
 
+    /* Configuring Color */
+
+    $mdThemingProvider.theme('default');
+    //$mdThemingProvider.disableTheming();
 }
+
+

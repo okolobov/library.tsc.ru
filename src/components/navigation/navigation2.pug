@@ -1,9 +1,10 @@
-md-toolbar.md-hue-2
+md-toolbar.md-medium-center
     .md-toolbar-tools
-        //md-button(aria-label="Brand") library.tsc.ru
-        h2.flex.md-truncate Сводный электронный каталог ТНЦ СО РАН 
+
+        h2.flex.md-truncate  Сводный электронный каталог ТНЦ СО РАН
+
         md-button(ui-sref="home", ui-sref-active="active-nav", aria-label="Home") Home 
         md-button(ui-sref="help()", ui-sref-active="active-nav") Помощь 
-        md-button(ng-if="!$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav") Вход
         md-button(ng-if="!$ctrl.isAuth", ui-sref="registration()", ui-sref-active="active-nav") Регистрация
+        md-button(ng-if="!$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav") Вход
         md-button(ng-if="$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav") Выход
