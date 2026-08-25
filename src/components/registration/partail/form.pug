@@ -1,25 +1,17 @@
 form(name="registrationForm", ng-submit="registrationForm.$valid && $ctrl.callRegistration()", enctype="application/x-www-form-urlencoded")
     md-input-container.md-block
         label Имя
-        input(name="identifier", type="text", ng-model='$ctrl.identifier', required, placeholder="Имя", autocomplete="off")
+        input(type="text", ng-model='$ctrl.identifier', required)
         div(ng-messages="registrationForm.identifier.$error", role="alert")
-            div(ng-message="required") This field is required.
-            //div(ng-message="identifier") Please enter a valid email address.
 
     md-input-container.md-block
         label Пароль 
-        input(name="password", type="password", ng-model='$ctrl.password', required, placeholder="Пароль", autocomplete="off")
-        div(ng-messages="registrationForm.password.$error", role="alert")
-            div(ng-message="required") This field is required.
-            //div(ng-message="password") Please enter a valid email address.
+        input(type="password", ng-model='$ctrl.password', required)
 
     md-input-container.md-block
         label Электронная почта
-        input(name="email", type="email", ng-model='$ctrl.email', required, placeholder="Электронная почта", autocomplete="off")
-        div(ng-messages="registrationForm.email.$error", role="alert")
-            div(ng-message="required") This field is required.
-            //div(ng-message="email") Please enter a valid email address.
+        input(type="email", ng-model='$ctrl.email', required)
 
     div
-        md-button(type="submit", ng-disabled="$ctrl.loading") Регистрация
-        md-button(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить
+        md-button.md-raised.md-primary(type="submit", ng-disabled="$ctrl.loading") Регистрация
+        md-button.md-raised(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить

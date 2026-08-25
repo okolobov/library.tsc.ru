@@ -21,6 +21,13 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
                 footer: 'footer',
                 body: 'home'
             }
+        }).state('advancedSearch', {
+            url: '/avancedSearch',
+            views: {
+                header: 'header',
+                footer: 'footer',
+                body: 'advancedSearch'
+            }
         }).state('help', {
             url: '/help',
             views: {

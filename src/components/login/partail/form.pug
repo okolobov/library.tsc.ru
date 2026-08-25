@@ -1,20 +1,12 @@
 form(name="loginForm", ng-submit="loginForm.$valid && $ctrl.login()", enctype="application/x-www-form-urlencoded")
     md-input-container.md-block
         label Имя
-        input(name="identifier", type="text", ng-model='$ctrl.identifier', required, placeholder="Имя", autocomplete="off")
-        div(ng-messages="loginForm.identifier.$error", role="alert")
-            div(ng-message="identifier") Please enter a valid email address.
-            //div(ng-message="required") This field is required.
+        input(type="text", ng-model='$ctrl.identifier', required)
 
     md-input-container.md-block
         label Пароль 
-        input(name="password", type="password", ng-model='$ctrl.password', required, placeholder="Пароль", autocomplete="off")
-        div(ng-messages="loginForm.password.$error", role="alert")
-            div(ng-message="password") Please enter a valid email address.
-            //div(ng-message="required") This field is required.
-
-
+        input(type="password", ng-model='$ctrl.password', required)
 
     div
-        md-button(type="submit", ng-disabled="$ctrl.loading") Вход
-        md-button(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить
+        md-button.md-raised.md-primary(type="submit", ng-disabled="$ctrl.loading") Вход
+        md-button.md-raised(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить

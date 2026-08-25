@@ -1,0 +1,67 @@
+md-content.md-padding
+    h1 Расширенный поиск 
+
+
+    // APT #1
+    div(layout="row")
+        md-input-container(flex="10")
+            label Атрибут 
+            md-select(ng-model="q.attr1", required)
+                md-option(value="4") Заглавие
+                md-option(value="1003") Автор
+                md-option(value="1016") Все 
+        md-input-container(flex="90")
+            label Введите запрос
+            input(ng-model="q.term1", required)
+
+    // APT #2
+    div(layout="row")
+        md-input-container(flex="10")
+            label Атрибут 
+            md-select(ng-model="q.attr2", required)
+                md-option(value="4") Заглавие
+                md-option(value="1003") Автор
+                md-option(value="1016") Все 
+        md-input-container(flex="90")
+            label Введите запрос
+            input(ng-model="q.term2", required)
+
+    // APT #3
+    div(layout="row")
+        md-input-container(flex="10")
+            label Атрибут 
+            md-select(ng-model="q.attr3", required)
+                md-option(value="4") Заглавие
+                md-option(value="1003") Автор
+                md-option(value="1016") Все 
+        md-input-container(flex="90")
+            label Введите запрос
+            input(ng-model="q.term3", required)
+
+
+    fieldset.standard
+        legend Ограничения поиска
+        div(layout="column")
+            md-checkbox(ng-model="data.cb1") Книги
+            md-checkbox(ng-model="data.cb2") Периодические издания 
+            md-checkbox(ng-model="data.cb3") Электронные ресурсы
+            md-checkbox(ng-model="data.cb4") Библ. издания
+            md-checkbox(ng-model="data.cb5") Энциклопедии
+            md-checkbox(ng-model="data.cb6") Стандарты
+
+
+
+
+
+
+
+
+
+    md-input-container
+        md-button.md-raised.md-primary(type="submit") Поиск
+        md-button.md-raised(type="reset") Очистить
+
+
+
+
+
