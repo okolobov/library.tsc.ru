@@ -17,8 +17,8 @@ module.exports = merge(common, {
                     '/logout',
                     '/profile',
                     '/registration',
-                    '/catalogue/api/v1',
-                    '/users/api/v1' 
+                    '/users/api/v1', 
+                    '/catalogue/api/v1'
                 ],
                 target: 'http://127.0.0.1:3000'
             }
@@ -27,8 +27,8 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.EnvironmentPlugin({
+            API_ENDPOINT_USERS: '/users/api/v1',
             API_ENDPOINT: '/catalogue/api/v1',
-            API_ENDPOINT_USERS: '/users/api/v1'
         }),
     ]
 });

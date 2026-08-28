@@ -1,9 +1,10 @@
+
 routing.$inject = [
     '$locationProvider',
     '$urlRouterProvider',
     '$stateProvider',
     '$httpProvider',
-    '$mdThemingProvider'
+    '$mdThemingProvider',
 ];
 
 export default function routing($locationProvider, $urlRouterProvider, $stateProvider, $httpProvider, $mdThemingProvider) {
@@ -155,10 +156,13 @@ export default function routing($locationProvider, $urlRouterProvider, $statePro
             }
         });
 
-    /* Configuring Color */
+    /* Configuring multiple themes */
 
-    $mdThemingProvider.theme('default');
+    $mdThemingProvider.alwaysWatchTheme(true);
+    $mdThemingProvider.theme('altTheme')
+        .primaryPalette('green');
     //$mdThemingProvider.disableTheming();
+
 }
 
 

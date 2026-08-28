@@ -9,7 +9,7 @@ function AuthenticationService($http, $cookies, $base64, appSettings) {
     service.login = login;
     service.profile = profile;
     service.logout = logout;
-    service.isAuthenticated = isAuthenticated;
+    service.isAuthenticated = isAuthenticated; // see isAuthenticated()
 
     return service;
 
@@ -37,7 +37,6 @@ function AuthenticationService($http, $cookies, $base64, appSettings) {
      */
     function login(identifier, password, callback) {
         var authstring = $base64.encode(identifier + ':' + password);
-        return callback(true);
         $http({method: 'POST', url: '/authenticate', headers: {'Authorization': 'Basic ' + authstring}}).then(function(response) {
             if (response.status === 200) {
                 callback(true);

@@ -2,4 +2,10 @@ extends layout
 
 block content
     div(ng-app="app", ng-cloak)
-        app
+        div(layout="row", layout-align="end center", flex)
+            md-button(ng-click="dynamicTheme = 'default'") Default
+            md-button(ng-click="dynamicTheme = 'altTheme'") altTheme
+        div(md-theme="{{dynamicTheme}}",md-theme-watch="")
+            app
+
+
