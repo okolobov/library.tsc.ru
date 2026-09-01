@@ -33,6 +33,7 @@ export default function LoginController($location, AuthenticationService) {
     function reset() {
         ctrl.identifier = null;
         ctrl.password = null;
+        ctrl.email = null;
         ctrl.error = null;
     }
 }

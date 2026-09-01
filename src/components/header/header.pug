@@ -8,8 +8,6 @@ md-toolbar
             | Поиск 
         md-button(ui-sref="help()", ui-sref-active="active-nav")
             | Помощь 
-        md-button(ng-if="!$ctrl.isAuth", ui-sref="registration()", ui-sref-active="active-nav")
-            | Регистрация
         md-button(ng-if="!$ctrl.isAuth", ui-sref="login()", ui-sref-active="active-nav")
             | Вход
         md-button(ng-if="$ctrl.isAuth", ui-sref="logout()", ui-sref-active="active-nav")

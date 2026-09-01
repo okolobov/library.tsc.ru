@@ -1,4 +1,10 @@
+
 form(name="loginForm", ng-submit="loginForm.$valid && $ctrl.login()", enctype="application/x-www-form-urlencoded")
+
+    div(ng-if="$ctrl.error")
+            | <strong>{{$ctrl.error}}</strong>
+
+
     md-input-container.md-block
         label Имя
         input(type="text", ng-model='$ctrl.identifier', required)
@@ -7,6 +13,10 @@ form(name="loginForm", ng-submit="loginForm.$valid && $ctrl.login()", enctype="a
         label Пароль 
         input(type="password", ng-model='$ctrl.password', required)
 
+
     div
         md-button.md-raised.md-primary(type="submit", ng-disabled="$ctrl.loading") Вход
         md-button.md-raised(type="reset", ng-disabled="$ctrl.loading", ng-click="$ctrl.reset()") Отменить
+        a(href, ui-sref="registration") Регистрация нового пользователя
+
+

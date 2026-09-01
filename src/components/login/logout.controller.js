@@ -17,7 +17,7 @@ export default function LogoutController($location, AuthenticationService) {
         AuthenticationService.logout(function(response) {
             ctrl.loading = false;
             if (response) {
-                $location.path('/');
+                $location.path('/login');
             } else {
                 self.error = "logout failed";
             }

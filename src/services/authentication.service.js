@@ -37,7 +37,10 @@ function AuthenticationService($http, $cookies, $base64, appSettings) {
      */
     function login(identifier, password, callback) {
         var authstring = $base64.encode(identifier + ':' + password);
+        console.log('>>> login');
         $http({method: 'POST', url: '/authenticate', headers: {'Authorization': 'Basic ' + authstring}}).then(function(response) {
+            console.log('>>> response.status -', response.status);
+            console.log('>>> response -', response);
             if (response.status === 200) {
                 callback(true);
             } else {
